@@ -1,0 +1,41 @@
+<ion-menu [content]="content">
+  <ion-side-menus side="left">
+
+    <!-- <ion-side-menu-content>
+      <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+        </ion-nav-buttons>
+      </ion-nav-bar>
+      <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content> -->
+
+    <ion-header class="menu-header">
+      <ion-header-bar class="bar-profile">
+        <div class="profile">
+          <img class="profile-picture" src="assets/img/logo-light.png" />
+          <h6 class="name">{{gEmail}}</h6>
+        </div>
+      </ion-header-bar>
+    </ion-header>
+
+    <ion-content class="content-menu">
+      <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          <ion-icon name='{{p.icon}}'></ion-icon>
+          &nbsp;&nbsp;{{ p.title | translate }}
+        </button>
+      </ion-list>
+
+    </ion-content>
+    <ion-footer>
+      <div class="versionapp">{{VrsApp}}</div>
+    </ion-footer>
+  </ion-side-menus>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
