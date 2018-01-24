@@ -1,6 +1,6 @@
 # platilla-ionic3-map-translate
-+Plantilla para una app en ionic, Componentes de Google Map Nativo y Traducción ngx-translate
+Plantilla para una app en ionic, Componentes de Google Map Nativo y Traducción ngx-translate
 
-+Descargar y ejecutar lo siguientes comando:
+Descargar y ejecutar lo siguientes comando:
 + npm i
-+ ionic state restore
++ ionic cordova prepare
